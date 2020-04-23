@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import SnacksPage from "./SnacksPage"
+
 
 
 class App extends Component {
@@ -26,13 +28,24 @@ class App extends Component {
       rating: "trash-tier",
       image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F2804%2F5352%2Fproducts%2F1d03055b-46a3-4265-b2f7-adbce99404e0_1024x1024.png%3Fv%3D1537461045&f=1&nofb=1"
       }
-  ]
-  }
+  ]}
+
+  // showSnackCards = () => {
+  //   return this.state.snacks.map(card => {
+  //     return <SnackCard 
+  //       key={card.id}
+  //       snackCard={card}
+  //       />
+  //   })
+  // }
+
   render() {
 
     return (
-      <div className="App">
-
+      <div className="snack-page">
+        <SnacksPage
+          snacks={this.state.snacks}
+        />
       </div>
     );
   }
